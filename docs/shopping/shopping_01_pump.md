@@ -1,21 +1,27 @@
 # Pump
 
-## Desc
+## Description
 
-Peristaltic Pump for watering a plant with clean water
+I want to buy Peristaltic Pump for watering a plant with clean water
 12 V brushless motor
-Around ~0.6 A [it can also be more or less]
+Around ~0.6 A [it can also be more or less than this]
 PWM
 Five wire PWM/FG interface
 Flow: between 140 to 200mL/min [it can also be more or less]
+Noise ≤60dB
 
 Tubing: from 3,2mm to 4,6mm internal diameter with life >=1000h (Neoprene or BPT a last choice silicone)
 Available in Denmark/EU with documented PWM and FG feedback, with technical documentation
     This is important, that we want to have available PWM and FG feedback, with its technical documentation
 
+Between 200kr and 450kr danish krone
+
+My idea is control it with a BBC micro:bit v2
+https://tech.microbit.org/hardware/edgeconnector/#pins-and-signals
+
 Pls find it in places in Denmark only first, then Amazon.de, then Alibaba, the Aliexpress, then eBay etc
 
-Between 200 kr and 450kr
+Give two or three models you recommend
 
 ## Some models
 
