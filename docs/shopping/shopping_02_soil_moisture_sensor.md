@@ -13,3 +13,8 @@
   - https://www.dfrobot.com/product-2816.html $29.00
   - MAX3485 TTL til RS485 module
     - 5 V boost converter ──► SEN0600
+
+## Others
+
+DFRobot SEN0308
+https://dk.rs-online.com/web/p/sensor-udvikling/2049905

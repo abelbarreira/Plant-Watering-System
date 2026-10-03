@@ -1,0 +1,14 @@
+# Float Switch
+
+RS PRO RS PRO
+https://dk.rs-online.com/web/p/niveausensorer-niveauswitche/0307103
+
+    Stainless Steel Vertical Float Switch for Water Pump Tank Pond Swim Pool Steel
+    https://www.ebay.com/itm/235562498451
+
+
+https://dk.rs-online.com/web/p/niveausensorer-niveauswitche/0307108
+
+https://www.ebay.com/itm/327106187023?_skw=side+mounted+float+switch&itmmeta=01M3MPSAJBCYQ3761K2VB15GDG&hash=item4c290c4f0f:g:mGUAAeSwzRxp4PXU&itmprp=enc%3AAQALAAABAGfYFPkwiKCW4ZNSs2u11xBpIBMXAp4qIoExpnfRyQv9vhij0KBbZqkbjXo1%2FzeIwM3%2B0BnoJ4d5V22pHv5SVeixRXDDf9Ki%2B5EHr4yuXyewBU5uHDbgYLwGLVXuBRxPyrdpstHsQUedY7xAxh36S0EQ9sc%2FzWDd76zLFuAZN8tiOlyG%2B6Zagus9tNeGR%2BDLk639MCdMNcdzSAPHgtwheC741hz9VgPtgyLuU8MoNjTJIBgmE4yIi4hlmpMeMQdM7f1cMrITyw40vZzbXoJmg8B%2FNseXQxqvpRp78an7WynCs9vvs%2B8N4sXiVMr1ktb24nqvBwLj4bhU0PBdiExOhlQ%3D%7Ctkp%3ABk9SR6ip5ZadaA
+
+https://www.ebay.com/itm/407055043610?_skw=side+mounted+float+switch&itmmeta=01M3MQ371V2A1QKW39NH8A2V65&hash=item5ec65f0c1a:g:oKgAAeSwGRBoo-50&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xAb4HIyA8ShxfvAIkD18fFu2PmBU7jgWiPigrmNvpThzMVfMYYCkpejW5F1Z68FjBMBRRR2xt%2BfT76MmtGyt47YnhIxv3UDROkckPuzdfXBkwvTjZ9aFM4cjhwuO95JZwEh%2BG3qN4GkXmgtp5vYJXU4dkWyns40PkO7aa0RGAmJtofUIJS%2F7VdKa4DsfGEQ2wpuH7eEv%2BOlJEf4ZSJ3MXs3fi49H9alo83jMxclRU%2Fy%2BJTc8sMaClJcm6alTOdtoi8ACCHsHyy1NwoTzwfRNZnu%7Ctkp%3ABk9SR4jxjJedaA
