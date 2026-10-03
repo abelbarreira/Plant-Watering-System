@@ -1,0 +1,19 @@
+# DAPLink Firmware - see https://daplink.io
+Build ID: v0257-gc782a5ba (gcc)
+Unique ID: 9906360200052820cfaf0911d2dd6249000000006e052820
+HIC ID: 6e052820
+Auto Reset: 1
+Automation allowed: 0
+Overflow detection: 0
+Incompatible image detection: 1
+Page erasing: 0
+Daplink Mode: Interface
+Interface Version: 0257
+Bootloader Version: 0257
+Git SHA: c782a5ba907377658bc28aa8d132a0fa44543687
+Local Mods: 0
+USB Interfaces: MSD, CDC, HID, WebUSB
+Bootloader CRC: 0x725bea7d
+Interface CRC: 0xe561f1de
+Remount count: 0
+URL: https://microbit.org/device/?id=9906&v=0257

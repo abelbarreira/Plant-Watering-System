@@ -1,0 +1,3 @@
+[submodule "microbit-v2-samples"]
+	path = microbit-v2-samples
+	url = https://github.com/lancaster-university/microbit-v2-samples.git
