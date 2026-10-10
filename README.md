@@ -1,6 +1,6 @@
 # Automatic Plant Watering System 🌱
 
-An embedded automatic watering system designed to keep a large indoor pothos plant watered safely and reliably while unattended.
+An embedded automatic watering system designed to keep a large indoor [**Pothos Plant** (Epipremnum Aureum)](docs/the_plant/the_plant.md) watered safely and reliably while unattended.
 
 The project is built as a real embedded system rather than a simple timer: watering decisions are based on soil moisture, with safety limits and room for future monitoring and remote control.
 
