@@ -1,6 +1,9 @@
 # Tubing
 
 Tubing BOM
+
+> Refer to [Kamoer](01_pumps/Kamoer/Kamoer.md)
+
   LEIRONG silicone tubing
   4 × 6 mm
   2–3 metres

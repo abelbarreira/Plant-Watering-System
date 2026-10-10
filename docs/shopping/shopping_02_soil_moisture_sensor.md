@@ -1,5 +1,12 @@
 # Soil-Moisture Sensor
 
+## Purchase
+
+DFRobot SEN0308
+https://dk.rs-online.com/web/p/sensor-udvikling/2049905
+
+## Alternatives
+
 - Gravity: IP65 Capacitive Soil Moisture Sensor
   - SKU: SEN0308
   - Waterproof, corrosion-resistant soil moisture sensor ensures accurate readings
@@ -13,8 +20,3 @@
   - https://www.dfrobot.com/product-2816.html $29.00
   - MAX3485 TTL til RS485 module
     - 5 V boost converter ──► SEN0600
-
-## Others
-
-DFRobot SEN0308
-https://dk.rs-online.com/web/p/sensor-udvikling/2049905

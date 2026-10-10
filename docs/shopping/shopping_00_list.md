@@ -7,3 +7,4 @@
 - [Edge Connector](shopping_05_edge_connector.md)
 - [Tubing](shopping_06_tubing.md)
 - [Electronic Kits](shopping_07_electronic_kits.md)
+- MOSFET (if needed)

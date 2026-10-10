@@ -31,6 +31,8 @@ Simply Pumps PMB200N eBay
 
 ## Links
 
+> Refer to [Kamoer](01_pumps/Kamoer/Kamoer.md)
+
 Pump Kamoer KPHM100
 https://www.alibaba.com/product-detail/Kamoer-KPHM100-Low-Flow-Brushless-brushed_1600308101707.html?spm=a2700.prosearch.normal_offer.d_title.204f67afquyZlQ&priceId=48ab3c73d2b842229a95e3d30304ca3e
 
