@@ -24,6 +24,9 @@
     High Current Output Capacity With a maximum dissipation power of 3A
     micro:bit V2 will be connected to here 3.3v output
 
+https://claude.ai/chat/61a19479-5c0d-4423-91b2-10f2cb4b1563
+https://chatgpt.com/c/6acabee3-5a08-83eb-9d73-d84d73a41b09
+
 ## Alternatives
 
 https://www.podconsultsbutik.dk/powerboard-til-micro-bit-fra-monk-makes
