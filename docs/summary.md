@@ -199,8 +199,7 @@ https://www.aliexpress.com/item/1005009488854963.html?spm=a2g0o.productlist.main
 
 - 22 awg silicone wire
     https://www.aliexpress.com/item/1005006106389362.html?spm=a2g0o.productlist.seoads.4.15342772LICaBW&p4p_pvid=202610171406522110340017747260003613995_2
-
-    https://www.alibaba.com/product-detail/High-temperature-Resistant-Soft-Silicone-Wire_1601609359523.html?spm=a2700.prosearch.normal_offer.d_title.366167afZYHFTa&selectedCarrierCode=SEMI_MANAGED_STANDARD%40%40STANDARD&priceId=39843e86a92d4b58bf9741367aecc33b
+    Buy red, black and one signal colour
 
 - Lever-nut / terminal blocks Wago 221
     https://www.alibaba.com/product-detail/221-Cable-Connector-6mm-4mm-Power_1601383854771.html?spm=a2700.prosearch.normal_offer.d_title.2d1b67afyqpWug&priceId=45360a9c330348cd903afd2c11babdac

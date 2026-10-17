@@ -22,6 +22,10 @@
     https://www.alibaba.com/product-detail/EU-Plug-Ac-Power-Cord-for_62095368508.html?spm=a2700.prosearch.normal_offer.d_title.6b6867afkDX9E5&priceId=ae8952d4ef804dc0b8e99f2915d5fde2
     10kr
 
+    A properly certified mains cord:
+        A CEE 7/7 to C13 cord, H05VV-F 3×0.75 mm². The generic “wire harness” listing is not a safe choice next to water. Don’t cut or modify it.
+    https://www.aliexpress.com/item/1005013222474091.html?spm=a2g0o.productlist.main.1.20546164ilhE2w&algo_pvid=fa0f2df1-8d63-46dd-a808-9c1373777909&algo_exp_id=fa0f2df1-8d63-46dd-a808-9c1373777909-0&pdp_ext_f=%7B%22order%22%3A%226%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21DKK%2128.08%2152.06%21%21%2127.55%2151.08%21%402103828617922732907085340e0fab%2112000060537561269%21sea%21DK%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Accaae3c5%3Bm03_new_user%3A-29895&curPageLogUid=AWuEjf0L2Bpk&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005013222474091%7C_p_origin_prod%3A
+
 - MEAN WELL AC/DC-adapter GST36B12-P1J (12 V, 3 A) 36W, 5.5×2.1 mm DC jack output
     https://dk.rs-online.com/web/p/ac-dc-adaptere/1176146?gb=a
 
