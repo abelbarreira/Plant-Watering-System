@@ -45,45 +45,25 @@ Size	65.1x130.36x32.3mm
 
 Function
     Range
-
     Capacitance Range
-
     9.99nF/99.99nF/999.9nF/9.99uF/99.99uF/999.9uF/9.999MF
-
     Voltage Range
-
     999.9mV/9.999V/99.99V/999.9V
-
     Current Range
-
     60mA/600mA/10A
-
     Resistance Range
-
     99.99/999.9/9.999k/99.99k/999.9K/999.9M
-
     Frequency
-
     99.99Hz/999.9Hz/9.999KHz/99.99KHz/999.9KHz/9.999MHz
-
     DC/AC Voltage
-
     9.999mV/99.99mV/999.9mV/9.999V/99.99V/750ACV(999.9DCV)
-
     DC/AC Current
-
     999.9mA/9.999A/99.99μA/999.9μA
-
     Display Type: Digital Display
-
     Diode Test: Yes
-
     Continuity: Yes
-
     Duty Cycle: 1%-99%
-
     Sample Rate: 3 times per second
-
     Power: 2 * 1.5V AAA batteries(Not Included)
 
 ## Purchase

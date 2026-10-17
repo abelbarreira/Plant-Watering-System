@@ -40,6 +40,16 @@ Get one 100 µF electrolytic (16 V or higher) and one 100 nF ceramic.
 A bulk capacitor (470-1000 µF, 25 V)
 100 nF
 
+## Fuse
+
+A fuse (2 A fast-blow)
+https://www.alibaba.com/product-detail/Fast-Acting-Blow-3-6x10mm-250V_1600898375235.html?spm=a2700.prosearch.normal_offer.d_title.400c67afFOj9ba&priceId=a98a168c0fe0482bb8df3a90695d9287
+
+    Protection on the 12 V side
+    A fuse (2 A fast-blow or a resettable PTC), a TVS diode (SMBJ15A) and a bulk capacitor (470-1000 µF, 25 V) near the pump.
+
+    Fuses → optional (but a single 2 A fuse on the pump's +12 V line is cheap insurance).
+
 ## Dupont Jumpers
 
 Female-to-female Dupont jumper wires for the connections to the BSS138 module and the AMS1117.
@@ -55,28 +65,4 @@ Wago lever connectors or screw-terminal blocks for the pump’s bare wires and t
 
 > Search for this    2.54 mm pitch
 
-
-## PENDINGS
-
-5. Protection on the 12 V side
-A fuse (2 A fast-blow or a resettable PTC), a TVS diode (SMBJ15A) and a bulk capacitor (470-1000 µF, 25 V) near the pump.
-A reverse-polarity diode (or a P-MOSFET). The screw-terminal jack makes miswiring easy, so confirm the centre-positive polarity.
-Wire gauge of at least 22 AWG for the 12 V runs, and ferrules for the screw terminals.
-
-6. Fail-safe design
-
-The float switch and the micro:bit are a single point of failure: if the program hangs while the pump is running, the pot overflows. Consider:
-
-Software limits: a maximum run time per cycle, a minimum soak time between waterings (the soil takes time to respond), and a daily volume cap.
-A hardware enable: a logic-level N-MOSFET (not an IRF520) switching the pump’s 12 V, driven by a separate GPIO. That way a hung micro:bit can’t leave the pump running.
-A drip tray under the pot, and ideally an independent overflow check.
-Wire the float switch fail-safe: switch to GND with the internal pull-up enabled, so water present = LOW and a broken wire reads as “empty” and stops the pump. Add 100 nF and a software debounce. Your idea of using the micro:bit’s internal pull-up is right, so no separate 3.3 V is needed for it.
-
-7. Mechanical items
-Barbed fittings or clamps for the 4.0 × 7.2 mm tubing, an intake filter or weight in the reservoir, and a drip nozzle or spray-free outlet.
-An enclosure that keeps electronics away from water, with strain relief on cables.
-Optionally, tie F/R to GND (or per the datasheet) to fix the direction, or give it a GPIO through a shifter if you want a short reverse to avoid drips.
-
-8. Calibration and software
-Soil sensor: record readings in dry air and in water, then set your dry threshold in between, with hysteresis.
-Pump: measure ml/s at a few duty cycles, since the duty-to-flow relationship won’t be linear. Remember that duty below 10% does nothing. At low speed it will also be much quieter than the 63-70 dB rating suggests for full speed.
+## Diode

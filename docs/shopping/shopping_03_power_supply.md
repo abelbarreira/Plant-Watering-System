@@ -5,6 +5,23 @@
 
 ## Purchase
 
+- MEAN WELL AC/DC-adapter GST60A12-P1J (12V, 5A) 60W, 5.5×2.1 mm DC jack output
+    Mean Well GST60A12-P1J High Efficiency 60W 12V Single Output Power Supply Adapter Industrial Office Equipment 5A Current Desktop
+    https://www.alibaba.com/product-detail/Mean-Well-GST60A12-P1J-High-Efficiency_1601225815189.html?spm=a2700.prosearch.normal_offer.d_title.569b67aftPmmW0&selectedCarrierCode=SEMI_MANAGED_STANDARD%40%40STANDARD&priceId=d50579caadad4899ae610087a391e2a9
+
+    https://www.alibaba.com/product-detail/Original-Meanwell-GST60A12-P1J-60W-AC_1600361833083.html?spm=a2700.prosearch.normal_offer.d_title.78cd67af1TfMBL&priceId=4dc7eb98738b44699079a5da529595ef
+
+    https://www.alibaba.com/product-detail/Original-Meanwell-GST60A12-P1J-60W-AC_1601940831790.html?spm=a2700.prosearch.normal_offer.d_title.78cd67af1TfMBL&selectedCarrierCode=SEMI_MANAGED_STANDARD%40%40STANDARD&priceId=4dc7eb98738b44699079a5da529595ef
+
+
+    MEAN WELL AC/DC-adapter 264V ac 5 A GST60A12-P1J
+    https://dk.rs-online.com/web/p/ac-dc-adaptere/8808408
+    131 kr
+
+    EU Plug Ac Power Cord for Computer C13 Cable 3 Pin Connector Wire Harness Powercon 3 Pin Wire Connector
+    https://www.alibaba.com/product-detail/EU-Plug-Ac-Power-Cord-for_62095368508.html?spm=a2700.prosearch.normal_offer.d_title.6b6867afkDX9E5&priceId=ae8952d4ef804dc0b8e99f2915d5fde2
+    10kr
+
 - MEAN WELL AC/DC-adapter GST36B12-P1J (12 V, 3 A) 36W, 5.5×2.1 mm DC jack output
     https://dk.rs-online.com/web/p/ac-dc-adaptere/1176146?gb=a
 
