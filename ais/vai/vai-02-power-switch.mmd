@@ -1,0 +1,14 @@
+flowchart TB
+  V12["+12 V rail (after fuse)"] -->|"Source"| Q1["P-MOSFET<br/>IRF9540N"]
+  Q1 -->|"Drain"| PV["Pump Vcc (red)"]
+  PV --> PUMP["Kamoer KHM3<br/>peristaltic pump"]
+  PUMP -->|"GND (black)"| GND["COMMON GROUND"]
+  RG["R1 10 k gate-source pull-up<br/>FET stays OFF at boot"] --- Q1
+  Q2["NPN 2N2222"] -->|"collector"| Q1
+  Q2 -->|"emitter"| GND
+  R2["R2 1 k"] -->|"base"| Q2
+  P14["micro:bit P14<br/>enable output"] --> R2
+  R3["R3 10 k base pull-down<br/>default OFF"] --- Q2
+  D1["Schottky SS34<br/>cathode to +12 V"] --- PV
+  CAP["470 uF + 100 nF<br/>across pump supply"] --- PV
+  CAP --- GND

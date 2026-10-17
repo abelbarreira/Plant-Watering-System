@@ -1,0 +1,63 @@
+
+flowchart TB
+    AC["230 V AC mains"]
+    PSU["Mean Well GST60A12-P1J<br/>12 V DC, 5 A"]
+    JACK["5.5 x 2.1 mm DC jack<br/>Verify polarity and rating"]
+    FUSE["2 A fuse candidate<br/>Near +12 V entry"]
+    P12["+12 V distribution"]
+    GND["Common 0 V / GND"]
+
+    AC --> PSU
+    PSU --> JACK
+    JACK --> FUSE
+    FUSE --> P12
+    JACK --> GND
+
+    P12 --> PUMP["Kamoer pump RED<br/>Vcc +12 V"]
+    GND --> PUMP
+    GND --> FR["Pump GREEN F/R<br/>Tie to GND for forward"]
+
+    P12 --> BUCK["LM2596 buck converter<br/>Set and verify 5.0 V"]
+    GND --> BUCK
+    BUCK --> V5["+5 V logic rail"]
+    BUCK --> GND
+
+    V5 --> BUF["74AHCT125<br/>VCC = 5 V<br/>GND = common 0 V"]
+    GND --> BUF
+    BUF --> R1["1 kΩ series resistor"]
+    R1 --> SP["Pump WHITE SP<br/>5 V PWM, 10–30 kHz"]
+    GND --> PUMP
+
+    MB["micro:bit V2<br/>Battery-powered via JST"]
+    EDGE["Kitronik 5601B"]
+    MB --> EDGE
+
+    EDGE -->|"P2: PWM 3.3 V"| PD["10 kΩ pull-down<br/>P2 to GND"]
+    PD --> BUF
+    EDGE -->|"3V"| SENSOR["DFRobot SEN0308<br/>VCC"]
+    EDGE -->|"GND"| SENSOR
+    SENSOR -->|"Analog signal"| P1["P1 analog input"]
+    EDGE --> GND
+
+    SENSOR -->|"GND"| GND
+
+    FLOAT["Float switch<br/>reservoir low-water detection"]
+    PULLUP["10 kΩ pull-up<br/>to micro:bit 3 V"]
+    EDGE -->|"3V"| PULLUP
+    PULLUP --> P12IN["P12 digital input"]
+    FLOAT --> P12IN
+    FLOAT --> GND
+
+    FG["Pump YELLOW FG"]
+    FGIN["FG interface<br/>Confirm output type first"]
+    FG --> FGIN
+    FGIN -->|"Safe 3.3 V signal"| P16["P16 digital input"]
+    EDGE -->|"GND"| GND
+
+    C5["100 nF decoupling<br/>at buffer VCC/GND"]
+    V5 --> C5
+    C5 --> GND
+
+    C12["12 V bulk capacitor<br/>near pump branch"]
+    P12 --> C12
+    C12 --> GND

@@ -1,0 +1,36 @@
+flowchart TD
+  AC["AC 230 V mains"] --> CORD["EU C13 power cord"]
+  CORD --> PSU["MEAN WELL GST60A12-P1J<br/>12 V / 5 A / 60 W"]
+  PSU --> JACK["DC female jack 5.5x2.1<br/>screw terminals"]
+  JACK -->|"+12 V"| FUSE["Fuse 2 A slow-blow"]
+  JACK -->|"GND"| GND["COMMON GROUND STAR"]
+  FUSE --> V12["+12 V rail"]
+  V12 -->|"Vin"| BUCK["LM2596 buck module"]
+  BUCK -->|"5 V OUT"| V5["+5 V rail"]
+  BUCK -->|"3.3 V OUT"| V33["+3.3 V rail"]
+  V33 -->|"3 V pin"| MB["BBC micro:bit V2"]
+  V33 -->|"Vcc"| SOIL["SEN0308 soil sensor"]
+  V33 -->|"LV"| LS["BSS138 level shifter"]
+  V5 -->|"HV"| LS
+  GND --> LS
+  V12 -->|"Source"| Q1["P-MOSFET IRF9540N"]
+  Q1 -->|"Drain"| PV["Pump Vcc"]
+  PV --> PUMP["Kamoer KHM3 pump"]
+  PUMP -->|"GND"| GND
+  RG["R1 10 k gate-source"] --- Q1
+  Q2["NPN 2N2222"] -->|"collector"| Q1
+  Q2 -->|"emitter"| GND
+  P14["micro:bit P14"] -->|"1 k R2"| Q2
+  RB["R3 10 k pull-down"] --- Q2
+  D1["SS34 diode"] --- PV
+  CAP["470 uF + 100 nF"] --- PV
+  P2["micro:bit P2 PWM"] -->|"LV1"| LS
+  LS -->|"HV1"| SP["Pump SP"]
+  FG["Pump FG"] -->|"HV2"| LS
+  LS -->|"LV2"| P12["micro:bit P12"]
+  RUP["R4 4.7 k pull-up +5 V"] --- LS
+  SOIL -->|"signal"| P0["micro:bit P0"]
+  FS["Float switch"] -->|"term 1"| GND
+  FS -->|"term 2"| P13["micro:bit P13"]
+  RFS["10 k pull-up +3.3 V"] --- P13
+  MB --- V33

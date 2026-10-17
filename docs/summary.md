@@ -74,6 +74,7 @@ The idea is following:
     If the float sensor indicates there is no enough water in the reservoir to the BOARD then the BOARD stop the PUMP.
     The initial idea is to have a solderless environment
     The idea is to keep the full environment (electronics, cabling, power supply, wiring etc etc) as much as simple as possible
+    I want only one source of power supply, I mean, besides the Power Supply (MEAN WELL AC/DC-adapter) I dont want to connect the micro:bit from its battery pack.
 
 The Power Supply will be like this
 
@@ -183,14 +184,40 @@ https://www.aliexpress.com/item/1005009488854963.html?spm=a2g0o.productlist.main
         10pcs Resistor (100K)
         10pcs Resistor (1M)
 
-- A fuse (2 A fast-blow)
-    https://www.alibaba.com/product-detail/Fast-Acting-Blow-3-6x10mm-250V_1600898375235.html?spm=a2700.prosearch.normal_offer.d_title.400c67afFOj9ba&priceId=a98a168c0fe0482bb8df3a90695d9287
+- Fuse 2A slow-blow (T), 5 × 20 mm glass cartridge
+    Slow Blow Glass Tube Fuse 5x20MM 2a 5PCS
+    https://www.aliexpress.com/item/1005009422492983.html?spm=a2g0o.productlist.main.11.6c6bLKnQLKnQ5q&algo_pvid=e2835c82-52c7-4cf1-b7fc-66f59057ffb3&algo_exp_id=e2835c82-52c7-4cf1-b7fc-66f59057ffb3-10&pdp_ext_f=%7B%22order%22%3A%226631%22%2C%22spu_best_type%22%3A%22price%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21DKK%2116.64%2116.64%21%21%212.44%212.44%21%402161390417922690961358527e0e30%2112000049084083664%21sea%21DK%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3Accaae3c5%3Bm03_new_user%3A-29895&curPageLogUid=To14C9GaLCQG&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005009422492983%7C_p_origin_prod%3A
+
+    RS PRO 2A Patronsikring, Reaktionshastighed: T Glas, 250V ac, 5 x 20 mm
+    https://dk.rs-online.com/web/p/finsikringer/0563722
 
     Protection on the 12 V side
 
+- Holder: 5 × 20 mm fuse holder,  rated ≥ 2 A.
+    RS PRO Panelmonteret sikringsholder, 6.3A 5 x 20 mm RS PRO 25V
+    https://dk.rs-online.com/web/p/sikringsholdere/0563784?gb=a
+
+- 22 awg silicone wire
+    https://www.aliexpress.com/item/1005006106389362.html?spm=a2g0o.productlist.seoads.4.15342772LICaBW&p4p_pvid=202610171406522110340017747260003613995_2
+
+    https://www.alibaba.com/product-detail/High-temperature-Resistant-Soft-Silicone-Wire_1601609359523.html?spm=a2700.prosearch.normal_offer.d_title.366167afZYHFTa&selectedCarrierCode=SEMI_MANAGED_STANDARD%40%40STANDARD&priceId=39843e86a92d4b58bf9741367aecc33b
+
+- Lever-nut / terminal blocks Wago 221
+    https://www.alibaba.com/product-detail/221-Cable-Connector-6mm-4mm-Power_1601383854771.html?spm=a2700.prosearch.normal_offer.d_title.2d1b67afyqpWug&priceId=45360a9c330348cd903afd2c11babdac
+    With 1-core cable: buy 2 of 2P and 2 of 3P with
+
+- Infineon Type P-Kanal, MOSFET, 23 A 100 V Forbedring, 3 Ben, TO-220, HEXFET, IRF9540NPBF
+    https://dk.rs-online.com/web/p/mosfet/5411225?gb=a
+    14 kr
+
+- Clean Water Reservoir (5l or 10l)
+
 Considering all this, I want for you to deeply analyse everything and tell me following, pls
 
-1. Which other hardware or electronics components should I buy, I dont know, maybe I need some MOSFET, Diodes, etc or whatever you think I need get and it is not in the list
+1. Which other hardware or electronics components should I buy, maybe I need some MOSFET, Diodes, etc or whatever you think I need get and it is not in the list
 2. Shortly if you thing there are things in the list not needed, pls tell me
-3. Provide me mermaid flow chart with the full wiring from the Power Supply considering all the needed devices to be connected including pull ups , pull downs etc etc
-4. Dont worry about the software for the microcontroller for the moment, we will deal with this later
+3. Provide me a mermaid flow chart with the full wiring from the Power Supply considering all the needed devices to be connected including pull ups, pull downs etc etc
+    For example, flow chart with the:
+        - Power distribution, Power Switch, Complete Overview
+        - About Pump and Tubing assuming there is only one reservoir, and one plant which will receive two drippers
+4. Don't worry about the software for the microcontroller for the moment, we will deal with this later

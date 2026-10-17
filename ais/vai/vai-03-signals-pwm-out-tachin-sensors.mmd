@@ -1,0 +1,14 @@
+flowchart LR
+  P2["micro:bit P2<br/>PWM out ~15 kHz"] --> LV1["Level shifter LV1"]
+  LV1 --> HV1["Level shifter HV1"]
+  HV1 --> SP["Pump SP (white)"]
+  FG["Pump FG (yellow)"] --> HV2["Level shifter HV2"]
+  HV2 --> LV2["Level shifter LV2"]
+  LV2 --> P12["micro:bit P12<br/>pulse counter"]
+  R4["R4 4.7 k pull-up to +5 V"] --- HV2
+  P0["micro:bit P0<br/>analog input"] --- S1["SEN0308 signal"]
+  C1["100 nF to GND"] --- P0
+  FS["Float switch"] -->|"terminal 1"| GND["COMMON GROUND"]
+  FS -->|"terminal 2"| P13["micro:bit P13<br/>pull-up input"]
+  RP["10 k pull-up to +3.3 V"] --- P13
+  C2["100 nF to GND"] --- P13

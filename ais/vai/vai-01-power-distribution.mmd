@@ -1,0 +1,17 @@
+flowchart TB
+  AC["AC 230 V mains"] --> CORD["EU C13 power cord"]
+  CORD --> PSU["MEAN WELL GST60A12-P1J<br/>12 V / 5 A / 60 W"]
+  PSU --> JACK["DC female jack 5.5x2.1<br/>screw terminals"]
+  JACK -->|"+12 V"| FUSE["Fuse 2 A slow-blow<br/>in holder"]
+  JACK -->|"GND"| GND["COMMON GROUND STAR"]
+  FUSE --> V12["+12 V rail"]
+  V12 -->|"Vin"| BUCK["LM2596 buck module"]
+  BUCK -->|"5 V OUT"| V5["+5 V rail"]
+  BUCK -->|"3.3 V OUT"| V33["+3.3 V rail"]
+  V33 -->|"3 V pin"| MB["BBC micro:bit V2"]
+  V33 -->|"Vcc"| SOIL["DFRobot SEN0308<br/>soil moisture sensor"]
+  V33 -->|"LV"| LS["BSS138 level shifter<br/>LV = 3.3 V"]
+  V5 -->|"HV"| LS
+  GND --> LS
+  GND --> MB
+  GND --> SOIL
