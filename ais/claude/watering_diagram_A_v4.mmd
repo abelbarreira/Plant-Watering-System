@@ -1,0 +1,62 @@
+flowchart TB
+  subgraph MAINS["Mains side: earthed outlet with RCD"]
+    AC["230 V outlet with PE"] --> CORD["CEE 7/7 to C13 cord, H05VV-F 3x0.75<br/>carries PE, do not modify"] --> PSU["MEAN WELL GST60A12-P1J<br/>Class I, 12 V 5 A"]
+  end
+  PSU --> JACK["Female 5.5x2.1 jack, screw terminals<br/>plug is center-positive<br/>confirm + and - with multimeter"]
+  JACK -->|"+"| F1["F1 2 A slow-blow fuse"] --> SW1["SW1 power switch, 3 A or more"] --> N12(["+12V_SW<br/>Wago 3-port: SW1 in, module power +, breadboard +12V rail"])
+  JACK -->|"-"| NGND(["GND<br/>Wago 3-port: jack-, module power -, breadboard GND rail"])
+
+  subgraph REG["Logic supply on the breadboard"]
+    U1["U1 TSR 1-2433, 3.3 V 1 A<br/>pins: Vin, GND, Vout"]
+    C1["C1 470 uF 25 V on the 12 V rail<br/>also the input cap of U1"]
+    TVS["D2 SMBJ15A TVS, optional<br/>12 V rail to GND"]
+  end
+  N12 -->|"Vin"| U1
+  NGND --> U1
+  N12 --> C1
+  N12 --> TVS
+  C1 --- NGND
+  TVS --- NGND
+  U1 -->|"Vout"| N3(["3V rail = micro:bit 3V pin, 3.3 V<br/>C3 100 uF + 100 nF at the micro:bit<br/>measure: must read 3.30 V or more"])
+
+  subgraph PSW["Pump switch: one D4184-type MOSFET module with screw terminals"]
+    MOD["MOSFET module<br/>power in: + and -<br/>load out: + and -<br/>trigger input and trigger GND"]
+    R4["R4 10k: trigger to GND<br/>only if the module has no pull-down"]
+  end
+  N12 -->|"power +"| MOD
+  NGND -->|"power -"| MOD
+  P16 -->|"trigger"| MOD
+  NGND -->|"trigger GND"| MOD
+  R4 -.- MOD
+
+  PUMP["Kamoer KHM3-2-12B3N40, fixed full speed<br/>Red Vcc + White SP together to load +<br/>Black GND + Green F/R together to load -<br/>Yellow FG unused: insulate the end"]
+  MOD -->|"load + to Red and White"| PUMP
+  MOD -->|"load - to Black and Green"| PUMP
+
+  subgraph MB["micro:bit V2 on Kitronik 5601B"]
+    MB3V["3V pin"]
+    MBG["GND pin"]
+    P16["P16 pump on/off"]
+    P0["P0 analog in"]
+    P8["P8 float input"]
+    P13["P13 overflow input, optional"]
+  end
+  N3 --> MB3V
+  NGND --> MBG
+
+  subgraph SENS["Sensors"]
+    SEN["SEN0308: red VCC from 3V rail, yellow signal,<br/>two black GND"]
+    FLT["FLT1 RS PRO float<br/>contact CLOSED = water OK<br/>verify, listing says NC"]
+    R6["R6 2k pull-up to 3V rail<br/>plus C2 100 nF to GND at pin"]
+    FLT2["FLT2 overflow float, optional<br/>contact CLOSED = no overflow"]
+    R7["R7 2k pull-up to 3V rail<br/>plus C5 100 nF to GND at pin"]
+  end
+  N3 -->|"red VCC"| SEN
+  NGND --> SEN
+  SEN -->|"yellow"| P0
+  N3 --> R6 --> P8
+  FLT -->|"wire 1"| P8
+  FLT -->|"wire 2"| NGND
+  N3 --> R7 --> P13
+  FLT2 -->|"wire 1"| P13
+  FLT2 -->|"wire 2"| NGND

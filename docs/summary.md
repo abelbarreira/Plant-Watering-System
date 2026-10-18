@@ -229,7 +229,6 @@ Considering all this, I want for you to deeply analyse everything and tell me fo
 ## Simplification
 
 - Remove 3.3v and instead use directly 3v
-- [ ] 22 AWG Silicone Wires Domain Vs. Dupont Breadboard Domain
 
 I think I still one to use the PWM speed control and FG feedback with a brushless pump.
 And I want to avoid this "Power the micro:bit over USB from a 12→5 V buck module with a USB-A socket."
@@ -238,3 +237,12 @@ Let's say that for the moment
 Upon reading your comments, let's do some simplifications steps by steps from Current v2
 On Current v2 is 3.3v to 3v can be simplified, do that, pls
 Also maybe using those MOSFET PWM trigger module (D4184 type) or those DRV8871 driver. might simplify things?
+
+The same as v3, and keeping the same pump, but now without the speed control PWM and without the FG feedback
+We will calibrate and calculate so when the soil sensor indicate it start to water then it stop after some time
+Prepare the v4 with this idea pls, considering a big simplification as much as simple as possible
+
+## Pending Questions
+
+- [ ] 22 AWG Silicone Wires Domain Vs. Dupont Breadboard Domain
+- [ ] Reservoir is on the ground and the plan is some meters high
