@@ -221,6 +221,8 @@ https://www.aliexpress.com/item/1005009488854963.html?spm=a2g0o.productlist.main
     https://www.alibaba.com/product-detail/221-Cable-Connector-6mm-4mm-Power_1601383854771.html?spm=a2700.prosearch.normal_offer.d_title.2d1b67afyqpWug&priceId=45360a9c330348cd903afd2c11babdac
     With 1-core cable: buy 2 of 2P and 2 of 3P and 1P of 5P (GND star)
 
+- Screw PCB Terminal Block Connector Kit KF128-2.54 2Pin 3Pin 4Pin ??
+
 - Infineon Type P-Kanal, MOSFET, 23 A 100 V Forbedring, 3 Ben, TO-220, HEXFET, IRF9540NPBF
     https://dk.rs-online.com/web/p/mosfet/5411225?gb=a
     14 kr
