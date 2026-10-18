@@ -202,9 +202,20 @@ https://www.aliexpress.com/item/1005009488854963.html?spm=a2g0o.productlist.main
     - 680 µF / 25 V 5pCS
     - 1000 µF / 25 V 5pCS
 
-- 22 awg silicone wire
+- 22 AWG Wires (22 AWG is about 0.34 mm²)
+    Stranded 22 AWG silicone:
     https://www.aliexpress.com/item/1005006106389362.html?spm=a2g0o.productlist.seoads.4.15342772LICaBW&p4p_pvid=202610171406522110340017747260003613995_2
     Buy red, black and one signal colour
+
+    Solid 22 AWG:
+    https://www.aliexpress.com/item/1005008812047188.html?spm=a2g0o.productlist.seoads.6.9a3755ea5ZN4EH&p4p_pvid=202610180822379903555898239510004149416_3
+    A small spool in red and black, plus a signal colour if you like
+
+    Ferrules
+    https://www.aliexpress.com/ssr/300000512/BundleDealsDutyCovered?spm=a2g0o.productlist.main.7.2e04248dUN0b2A&businessCode=guide&productIds=1005005421539826%3A12000032998022984&pha_manifest=ssr&_immersiveMode=true&disableNav=YES&sourceName=SEARCHProduct&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005005421539826%7C_p_origin_prod%3A&pvid=72efad90-4706-47d0-a859-c2f03d95c5b9
+    22AWG 0.5mm2 for single cable and 0.75mm to join two cables
+    24AWG (pump) 0.25 mm² ferrules for a single 24 AWG wire and 0.5 mm² ferrules where two pump wires share one terminal
+    Shortly: 0.25 mm² some, 0.5 mm² some and 0.75mm some
 
 - Lever-nut / terminal blocks Wago 221
     https://www.alibaba.com/product-detail/221-Cable-Connector-6mm-4mm-Power_1601383854771.html?spm=a2700.prosearch.normal_offer.d_title.2d1b67afyqpWug&priceId=45360a9c330348cd903afd2c11babdac
@@ -244,5 +255,4 @@ Prepare the v4 with this idea pls, considering a big simplification as much as s
 
 ## Pending Questions
 
-- [ ] 22 AWG Silicone Wires Domain Vs. Dupont Breadboard Domain
 - [ ] Reservoir is on the ground and the plan is some meters high
