@@ -17,7 +17,7 @@ With following architecture
 
 - Kamoer Brushless Peristaltic Pump KHM3-2-12B3N40 with following:
         2-12B 12V DC Brushless motor (2000h)
-        Tube Neoprene, #40 4.0mm x 7.2mmm (1000h)
+        Tube Norprene, #40 4.0mm x 7.2mmm (1000h)
             Level One (12V, 0.8A): 640ml/min, 70dB, 12W
             Level Two (12V, 0.5A):  74ml/min, 63dB,  6W
         PWM speed regulation
@@ -36,7 +36,7 @@ With following architecture
         Ref: https://www.alibaba.com/product-detail/Kamoer-KHM-High-precision-DC-Motor_60772709984.html?spm=a2700.shop_index.82.7.6f7f2624Rd2Gss
         Ref: docs/shopping/01_pumps/Kamoer/KHM3.pdf
 
-    - Peristaltic Pump Neoprene Tube 4mm x 7.2mm
+    - Peristaltic Pump Norprene Tube 4mm x 7.2mm (Norprene A-60-F)
         https://www.alibaba.com/product-detail/LEIRONG-High-Quality-Silicone-Gel-Lab_1601402851177.html
         23.73 kr
 
@@ -197,13 +197,18 @@ https://www.aliexpress.com/item/1005009488854963.html?spm=a2g0o.productlist.main
     RS PRO Panelmonteret sikringsholder, 6.3A 5 x 20 mm RS PRO 25V
     https://dk.rs-online.com/web/p/sikringsholdere/0563784?gb=a
 
+- Bulk electrolytic cap:
+    - 470 µF / 25 V 5pCS
+    - 680 µF / 25 V 5pCS
+    - 1000 µF / 25 V 5pCS
+
 - 22 awg silicone wire
     https://www.aliexpress.com/item/1005006106389362.html?spm=a2g0o.productlist.seoads.4.15342772LICaBW&p4p_pvid=202610171406522110340017747260003613995_2
     Buy red, black and one signal colour
 
 - Lever-nut / terminal blocks Wago 221
     https://www.alibaba.com/product-detail/221-Cable-Connector-6mm-4mm-Power_1601383854771.html?spm=a2700.prosearch.normal_offer.d_title.2d1b67afyqpWug&priceId=45360a9c330348cd903afd2c11babdac
-    With 1-core cable: buy 2 of 2P and 2 of 3P with
+    With 1-core cable: buy 2 of 2P and 2 of 3P and 1P of 5P (GND star)
 
 - Infineon Type P-Kanal, MOSFET, 23 A 100 V Forbedring, 3 Ben, TO-220, HEXFET, IRF9540NPBF
     https://dk.rs-online.com/web/p/mosfet/5411225?gb=a
@@ -220,3 +225,16 @@ Considering all this, I want for you to deeply analyse everything and tell me fo
         - Power distribution, Power Switch, Complete Overview
         - About Pump and Tubing assuming there is only one reservoir, and one plant which will receive two drippers
 4. Don't worry about the software for the microcontroller for the moment, we will deal with this later
+
+## Simplification
+
+- Remove 3.3v and instead use directly 3v
+- [ ] 22 AWG Silicone Wires Domain Vs. Dupont Breadboard Domain
+
+I think I still one to use the PWM speed control and FG feedback with a brushless pump.
+And I want to avoid this "Power the micro:bit over USB from a 12→5 V buck module with a USB-A socket."
+Let's say that for the moment
+
+Upon reading your comments, let's do some simplifications steps by steps from Current v2
+On Current v2 is 3.3v to 3v can be simplified, do that, pls
+Also maybe using those MOSFET PWM trigger module (D4184 type) or those DRV8871 driver. might simplify things?

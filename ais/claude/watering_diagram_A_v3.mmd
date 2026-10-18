@@ -1,0 +1,92 @@
+flowchart TB
+  subgraph MAINS["Mains side: earthed outlet with RCD"]
+    AC["230 V outlet with PE"] --> CORD["CEE 7/7 to C13 cord, H05VV-F 3x0.75<br/>carries PE, do not modify"] --> PSU["MEAN WELL GST60A12-P1J<br/>Class I, 12 V 5 A"]
+  end
+  PSU --> JACK["Female 5.5x2.1 jack, screw terminals<br/>plug is center-positive<br/>confirm + and - with multimeter"]
+  JACK -->|"+"| F1["F1 2 A slow-blow fuse"] --> SW1["SW1 power switch, 3 A or more"] --> N12(["+12V_SW<br/>Wago 3-port: SW1 in, breadboard +12V rail out"])
+  JACK -->|"-"| NGND(["GND star<br/>Wago 5-port: jack-, pump black, pump green, breadboard GND rail"])
+
+  subgraph REG["Fixed regulators on the breadboard: no tuning"]
+    U1["U1 TSR 1-2433, 3.3 V 1 A<br/>pins: Vin, GND, Vout"]
+    U2["U2 TSR 1-2450, 5 V 1 A<br/>pins: Vin, GND, Vout"]
+  end
+  N12 -->|"Vin"| U1
+  N12 -->|"Vin"| U2
+  NGND --> U1
+  NGND --> U2
+  U1 -->|"Vout"| N3(["3V rail = micro:bit 3V pin, 3.3 V<br/>C3 100 uF + 100 nF at the micro:bit"])
+  U2 -->|"Vout"| N5(["+5V rail<br/>C4 100 uF + 100 nF"])
+
+  subgraph PSTAGE["Pump power stage on breadboard: OFF by default"]
+    C1["C1 470 uF 25 V<br/>+12V_SW to GND, close to Q1"]
+    TVS["D2 SMBJ15A TVS, optional<br/>+12V_SW to GND"]
+    Q1["Q1 IRF9540N P-MOSFET<br/>Source = +12V_SW, Drain = PUMP_V<br/>pins G, D, S: tab is drain"]
+    R1["R1 10k: gate to +12V_SW<br/>keeps Q1 off"]
+    R2["R2 1k: gate series, soft turn-on"]
+    Q2["Q2 PN2222: collector to R2, emitter to GND<br/>check E-B-C with diode test"]
+    R3["R3 1k: P16 to base"]
+    R4["R4 10k: base to GND<br/>keeps Q2 off at boot"]
+  end
+  N12 --> C1
+  N12 --> TVS
+  N12 -->|"Source"| Q1
+  N12 --> R1 -->|"Gate"| Q1
+  C1 --- NGND
+  TVS --- NGND
+  Q1 -->|"Gate"| R2 --> Q2
+  P16 --> R3 --> Q2
+  R4 --- Q2
+  Q2 -->|"Emitter"| NGND
+
+  PUMP["Kamoer KHM3-2-12B3N40<br/>Red Vcc, Black GND, Green F/R<br/>White SP, Yellow FG"]
+  Q1 -->|"Drain = PUMP_V to Red"| PUMP
+  NGND -->|"Black"| PUMP
+  NGND -->|"Green F/R to GND = positive rotation<br/>floating = reverse"| PUMP
+
+  subgraph LSH["BSS138 4-channel level shifter"]
+    LV["LV pin"]
+    HV["HV pin"]
+    LG["GND pin"]
+    CH1["CH1: LV1 to HV1"]
+    CH2["CH2: LV2 to HV2"]
+    R5["R5 1k: LV1 to GND<br/>idle LOW, SP about 0.3 V"]
+  end
+  N3 --> LV
+  N5 --> HV
+  NGND --> LG
+  CH1 --- R5
+  R5 --- NGND
+  CH1 -->|"HV1 to White SP"| PUMP
+  PUMP -->|"Yellow FG to HV2"| CH2
+
+  subgraph MB["micro:bit V2 on Kitronik 5601B"]
+    MB3V["3V pin"]
+    MBG["GND pin"]
+    P2["P2 PWM 20 kHz"]
+    P14["P14 FG input"]
+    P16["P16 pump enable"]
+    P0["P0 analog in"]
+    P8["P8 float input"]
+    P13["P13 overflow input, optional"]
+  end
+  N3 --> MB3V
+  NGND --> MBG
+  P2 --> CH1
+  CH2 -->|"LV2"| P14
+
+  subgraph SENS["Sensors"]
+    SEN["SEN0308: red VCC from 5V, yellow signal,<br/>two black GND"]
+    FLT["FLT1 RS PRO float<br/>contact CLOSED = water OK<br/>verify, listing says NC"]
+    R6["R6 2k pull-up to 3V rail<br/>plus C2 100 nF to GND at pin"]
+    FLT2["FLT2 overflow float, optional<br/>contact CLOSED = no overflow"]
+    R7["R7 2k pull-up to 3V rail<br/>plus C5 100 nF to GND at pin"]
+  end
+  N5 -->|"red VCC"| SEN
+  NGND --> SEN
+  SEN -->|"yellow"| P0
+  N3 --> R6 --> P8
+  FLT -->|"wire 1"| P8
+  FLT -->|"wire 2"| NGND
+  N3 --> R7 --> P13
+  FLT2 -->|"wire 1"| P13
+  FLT2 -->|"wire 2"| NGND

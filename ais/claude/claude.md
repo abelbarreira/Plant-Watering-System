@@ -67,11 +67,10 @@ Is there any way to simplify the power distribution and the signal wiring?
 I mean, I havent bought anything yet, so if you thing there is a better choice to buy something different to avoid less modules, or cabling or similar
 i would like that you do a deep analysis of the different options and tell me pls
 
-In general I can see the Power Supply thing we have is complex, all this things about LM2596 module and B22138  and also all the thing with the Power Pump Stage on bread board seems to me complex, I dont know, whatever can simplyfiy will be helpful
+In general I can see the Power Supply thing we have is complex, all this things about LM2596 module and B22138  and also all the thing with the Power Pump Stage on bread board seems to me complex, I dont know, whatever can simplify will be helpful
 
 Pls consider change wahtever, pump, modules but the controller micro:bit should stay, this I already have
 
 do your best and give me your advice
-
 
 > https://claude.ai/chat/80350695-ebf8-4997-91ce-1acc62973bb0?artifact=34507af8-2b58-4162-a137-54b59ebcb462
