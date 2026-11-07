@@ -1,0 +1,13 @@
+﻿Name,Quantity,Component
+"DIST HC-SR04P 3.3v",1," Ultrasonic Distance Sensor (4-pin)"
+"M1",1," DC Motor"
+"2",1," Breadboard"
+"MB1",1,"Blue micro:bit with Breakout"
+"P1",1,"12 , 5  Power Supply"
+"SEN0308",1," Soil Moisture Sensor"
+"T1 IRLZ44N",1," nMOS Transistor (MOSFET)"
+"R1",1,"10 kΩ Resistor"
+"D1 1N4007",1," Diode"
+"R2",1,"100 Ω Resistor"
+"C2 elect",1,"220 uF Capacitor"
+"C1 cer",1,"100 nF Capacitor"
