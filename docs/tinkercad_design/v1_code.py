@@ -1,26 +1,31 @@
 # ====================================================================
-#  One-plant automatic watering  -  BBC micro:bit V2  (Tinkercad Python)
+#  One-plant automatic watering  -  BBC micro:bit V2  (Tinkercad Python)   v2
 # ====================================================================
-#  Wiring (from schematics_v1.pdf)
-#    P0  <- HC-SR04 ECHO          (digital input)
-#    P1  -> HC-SR04 TRIG          (digital output)
+#  Wiring
+#    P0  <- HC-SR04P ECHO         (digital input)
+#    P1  -> HC-SR04P TRIG         (digital output)
 #    P2  <- SEN0308 SIG           (analog input)
 #    P8  -> 100 ohm -> MOSFET gate (10k pull-down) -> pump (low-side)
 #
 #  Behaviour
-#    * Pump is OFF at power-up and stays off until the soil has been
-#      confirmed dry on several readings in a row AND the reservoir
+#    * Pump is OFF at power-up and only runs inside water_plant(), after
+#      the soil was dry on several readings in a row AND the reservoir
 #      has enough water.
-#    * Pump runs for a fixed time (PUMP_RUN_SECONDS ~ 500 ml) and is
-#      cut early if the reservoir drops below the minimum level, if
-#      the distance reading is invalid, or if A+B is pressed.
-#    * After every run there is a cool-down so water can soak in
-#      before the soil is judged again (prevents over-watering).
+#    * Pump runs PUMP_RUN_SECONDS (~500 ml) and is cut early if the
+#      reservoir gets too low, the distance reading is invalid, or A+B.
+#    * Cool-down after every run so water can soak in.
 #
-#  Buttons (handy for calibration)
-#    A   = show raw soil reading        B   = show water distance (cm)
-#    A+B = emergency stop of the pump
+#  Buttons / gestures (for testing and calibration)
+#    A      = show raw soil reading
+#    B      = show water distance in cm ("?" = no echo received)
+#    A+B    = emergency stop
+#    SHAKE  = run the pump for 3 s (tests MOSFET / pump wiring only)
+#
+#  TEST_MODE = True  -> fast timings + live readings scroll every cycle
+#  Set TEST_MODE = False once everything is calibrated and working.
 # ====================================================================
+
+TEST_MODE = True
 
 # ---------------- Pins ----------------
 PIN_ECHO = DigitalPin.P0
@@ -29,32 +34,30 @@ PIN_SOIL = AnalogPin.P2
 PIN_PUMP = DigitalPin.P8
 
 # ---------------- Settings (CALIBRATE THESE) ----------------
-# Soil: read raw values with button A, once with the probe in air /
-# bone-dry soil and once in a glass of water, then enter them here.
-# The maths works whichever way round the numbers go.
+# Soil: press A with the sensor dry, then wet, and type the two raw
+# numbers here. Works whichever way round they are.
 SOIL_RAW_DRY = 800        # raw reading when completely dry   (placeholder)
 SOIL_RAW_WET = 400        # raw reading when fully wet        (placeholder)
 SOIL_DRY_PERCENT = 35     # at or below this % the plant needs water
 
-# Reservoir: distance from sensor (top of tank) down to the water.
-# Larger distance = less water. Fill the tank to the lowest level you
-# still accept (one 500 ml dose + a little reserve), press B, and
-# type the distance you see here.
-LOW_WATER_CM = 15         # farther than this = "not enough water" (placeholder)
+# Reservoir: distance from sensor down to the water. Larger = emptier.
+# Set the lowest acceptable level, press B, type the number here.
+LOW_WATER_CM = 15         # farther than this = "not enough water"
 
-# Pump: time it with a measuring jug until it delivers ~500 ml.
-PUMP_RUN_SECONDS = 30     # placeholder - set from your own test
+# Pump run time for ~500 ml (measure it with a jug on the real build)
+PUMP_RUN_SECONDS = 8 if TEST_MODE else 30
 
 # Timing
-CHECK_INTERVAL_MS = 10000 # how often the soil is sampled
-DRY_CONFIRM_COUNT = 3     # consecutive dry readings needed to start
-TANK_CHECK_MS = 2000      # tank re-check interval while pumping
-COOLDOWN_MIN = 30         # minimum wait after a run before the next one
+CHECK_INTERVAL_MS = 2000 if TEST_MODE else 10000
+DRY_CONFIRM_COUNT = 2 if TEST_MODE else 3
+TANK_CHECK_MS = 2000
+COOLDOWN_MIN = 1 if TEST_MODE else 30
 
 # ---------------- State ----------------
 dry_count = 0
 next_allowed_ms = 0
 abort_requested = False
+testing_pump = False
 
 
 # ---------------- Pump ----------------
@@ -102,7 +105,7 @@ def measure_once_cm():
 
 def distance_cm():
     # Median of 5 readings; -1 if fewer than 3 were valid.
-    readings = []
+    readings: List[number] = []
     for i in range(5):
         d = measure_once_cm()
         if d > 0:
@@ -111,12 +114,12 @@ def distance_cm():
     n = len(readings)
     if n < 3:
         return -1
-    for i in range(n):                      # tiny insertion-style sort
-        for j in range(n - 1 - i):
-            if readings[j] > readings[j + 1]:
-                tmp = readings[j]
-                readings[j] = readings[j + 1]
-                readings[j + 1] = tmp
+    for a in range(n):
+        for b in range(n - 1 - a):
+            if readings[b] > readings[b + 1]:
+                tmp = readings[b]
+                readings[b] = readings[b + 1]
+                readings[b + 1] = tmp
     return readings[Math.idiv(n, 2)]
 
 
@@ -148,7 +151,7 @@ def water_plant():
     next_allowed_ms = input.running_time() + COOLDOWN_MIN * 60000
 
 
-# ---------------- Buttons ----------------
+# ---------------- Buttons / gestures ----------------
 def on_button_a():
     basic.show_number(Math.round(soil_raw()))
 
@@ -167,17 +170,33 @@ def on_button_ab():
     pump_stop()
 
 
+def on_shake():
+    global testing_pump
+    if testing_pump:
+        return
+    testing_pump = True
+    pump_start()
+    basic.pause(3000)
+    pump_stop()
+    testing_pump = False
+
+
 input.on_button_pressed(Button.A, on_button_a)
 input.on_button_pressed(Button.B, on_button_b)
 input.on_button_pressed(Button.AB, on_button_ab)
+input.on_gesture(Gesture.SHAKE, on_shake)
 
 
 # ---------------- Main loop ----------------
 def on_forever():
     global dry_count
-    pump_stop()                             # pump is only ever on inside water_plant()
     now = input.running_time()
-    pct = soil_percent(soil_raw())
+    raw = soil_raw()
+    pct = soil_percent(raw)
+
+    if TEST_MODE:
+        d = distance_cm()
+        basic.show_string("S" + str(Math.round(raw)) + " " + str(Math.round(pct)) + "% D" + str(Math.round(d)))
 
     if pct <= SOIL_DRY_PERCENT:
         dry_count += 1
