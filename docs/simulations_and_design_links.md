@@ -20,6 +20,8 @@
 - [blueprint](https://www.blueprint.io/)
     - Similar Projects
 
+- [electronics-101-six](https://electronics-101-six.vercel.app/)
+
 ## Similar Projects
 
 - [instructables](https://www.instructables.com/)
