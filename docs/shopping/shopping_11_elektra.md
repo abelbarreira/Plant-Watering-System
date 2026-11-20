@@ -18,3 +18,7 @@
     Solid 22 AWG
 - Float Switch
 - Soil-Moisture Sensor DFRobot SEN0308
+- Soldering stuff
+
+https://www.elextra.dk/main.aspx?page=butik1
+
