@@ -6,22 +6,6 @@
 
 ## List
 
-- DC Jack 5.5×2.1 Female socket To screw terminals 12v
-    - DC forlængerstik m. skrueterminaler - Ø5,5/2,1mm hun H36100
-    https://www.elextra.dk/en-gb/p/dc-forl%C3%A6ngerstik-m-skrueterminaler-%C3%B855-21mm-hun/H36100
-    15k
-
-- DC Jack 5.5×2.1   Male socket To screw terminals 12v
-    DC stik m. skrueterminaler - Ø5,5/2,1mm han (1 stk.) H36101
-    https://www.elextra.dk/en-gb/p/dc-stik-m-skrueterminaler-%C3%B855-21mm-han-1-stk/H36101
-    15k
-
-- 22 AWG Wires (22 AWG is about 0.34 mm²)
-    Stranded 22 AWG silicone
-    Solid 22 AWG
-
-- MOSFET IRLZ44N
-
 - Fuse 2A slow-blow (T), 5 × 20 mm glass cartridge (T2A)
     - Glassikring - Ø5x15mm, Flink, 2A 125VAC
     https://www.elextra.dk/en-gb/p/glassikring-%C3%B85x15mm-flink-2a-125vac/H11288
@@ -31,28 +15,29 @@
 
 - Fuse Holder
 
-- Wago Lever Connectors
-    221 klemme-samlemuffe - 2 x 0,2-4mm², til alle ledningstyper
-    https://www.elextra.dk/en-gb/p/221-klemme-samlemuffe-2-x-02-4mm-til-alle-ledningstyper/H50501
-
-    221 klemme-samlemuffe - 5 x 0,2-4mm², til alle ledningstyper
-    https://www.elextra.dk/en-gb/p/221-klemme-samlemuffe-5-x-02-4mm-til-alle-ledningstyper/H50503
-
-- Capacitor electrolytic:
-    - 220 µF / 25 V, low ESR type
-    - 470 µF / 25 V
-    - 680 µF / 25 V
-    - 1000 µF / 25 V
-
-- Capacitor ceramic:
-    - 100 nF 2pcs
-
-- Schottky Diode
-    - 1N5819 (1 A) or 1N5822 (3 A)
-
 - 74AHCT buffer chip
     - SN74AHCT125N
 
-- Float Switch
-- Soil-Moisture Sensor DFRobot SEN0308
+- Water Level Switch - Normally Closed (NC)
+    On-state: from 9.0 til 13.7mm
+    Off-state: from 4.0 til 12.0mm
+    https://www.elextra.dk/en-gb/p/vandstandskontakt-normalt-lukket-nc/H23360
+    109 kr
+
+- Soil Moisture and Water Level Sensor, 5V WPSE303, WHADDA (by Velleman)
+    https://www.elextra.dk/en-gb/p/jordfugtigheds-og-vandstandssensor-til-arduino/H50453
+
+- Mini Peristaltic Pump, 6V 5W, WPM447 WHADDA (by Velleman)
+    Tube dimensions (Oø x Iø): 4.0 x 2.0 mm
+    Tube material: Silicone
+    Tube life: > 200 h
+    Flow rate: >= 39ml / min
+    https://www.elextra.dk/en-gb/p/mini-doseringspumpe-6v-5w-st%C3%B8jsvag/H60615
+
+- Mini Peristaltic Pump, 12V 5W
+    https://www.elextra.dk/en-gb/p/mini-doseringspumpe-12v-5w-80ml-min-st%C3%B8jsvag/H51865
+
+- Mini Water Pump - 5-12Vdc, 240L/h
+    https://www.elextra.dk/en-gb/p/mini-vandpumpe-5-12vdc-240l-t/H57510
+
 - Soldering stuff
