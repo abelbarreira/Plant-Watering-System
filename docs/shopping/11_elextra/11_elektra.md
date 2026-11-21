@@ -41,3 +41,7 @@
     https://www.elextra.dk/en-gb/p/mini-vandpumpe-5-12vdc-240l-t/H57510
 
 - Soldering stuff
+
+- STP200N3LL N-Channel MOSFET TO-220 30V, Logic Level
+    Maybe not needed
+

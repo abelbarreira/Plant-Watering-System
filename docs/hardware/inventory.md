@@ -4,12 +4,18 @@
 
 1pcs    Microbit BBC micro:bit v2
 1pss    IOBIT Expansion Board breakout Adapter V2.0 for micro:bit with buzzer
+1pcs    STM32F407x DISCOVERY: `STM32F407G-DISC1` 32-bit ARM® Cortex®-M4 with FPU core, 1-Mbyte Flash memory and 192-Kbyte RAM in an LQFP100 package
+1pcs    FT232RL FTDI USB 2.0 to TTL Serial Adapter Module, HW-417-V1.2
+
+## Power Supply
+
+1pcs    Mean Well GST60A12-P1J, 12V, 5A, 60W with DC Jack 5.5×2.1 Male
+1pcs    HP 18.5V 3.5A 65W  with DC Jack 5.5×2.1 Male
+1pcs    HW 131 Power Supply (6.5-12V) gives 3.3 V or 5 V per rail by jumper, under 700 mA
+1pcs    Deltaco USB-AC149 Output USB-A 5.0V 2.4A 12.0W
 1pcs    Battery Holder 2 x AAA 1,5v
 
-## Electronics
-
-1pcs    Mean Well GST60A12-P1J (12V, 5A 60W) with DC Jack 5.5×2.1 Male
-1pcs    HW 131 Power Supply (6.5-12V) gives 3.3 V or 5 V per rail by jumper, under 700 mA
+## Components
 
 1pcs    830 tie-points Breadboard MB-102
 
@@ -19,6 +25,15 @@
 1m      Wire, 0,35mm2, 150v Stranded Black
 1m      Wire, 0,35mm2, 150v Stranded Red
 1m      Wire, 0,35mm2, 150v Stranded White
+1m      Ribbon Farvet Kabel 20Pin - 1 Meter × 1
+16pcs   Dupont Pin Connector Male
+16pcs   Dupont Pin Connector Female
+30pcs   Dupont Wire Housing 1-4P - 1 Pol Connector
+2pcs    Dupont Wire Housing 1-4P - 2 Pol Connector
+2pcs    Dupont Wire Housing 1-4P - 3 Pol Connector
+2pcs    Dupont Wire Housing 1-4P - 4 Pol Connector
+2pcs    Jumper Cap Mini 2.54mm × 2
+
 2pcs    Pin header (40pin)
 
 1pcs    Precision Potentiometer
@@ -70,3 +85,8 @@
 1pcs    Clamp-type connector, 2 x 0.2–4 mm², 32 A, 450V, all wire types, 1 connection, 5 terminals
 1pcs    DC Jack 5.5×2.1 Female socket To Screw Terminals
 1pcs    DC Jack 5.5×2.1 Male   socket To Screw Terminals
+1pcs    USB-A/Mini-B Datakabel 30CM × 1
+
+## Others
+
+1pcs   Multimeter ANENG AN8009
