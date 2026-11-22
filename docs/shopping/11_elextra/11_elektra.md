@@ -11,7 +11,8 @@ https://www.elextra.dk/en-gb/p/sikring-%C3%B836x10mm-tr%C3%A6g-2a-250vac/H22351
 
 https://www.elextra.dk/en-gb/p/sikring-%C3%B85x20mm-tr%C3%A6g-2a/H15291
 
-
+Holder
+https://www.elextra.dk/en-gb/p/sikringsholder-%C3%B85x20mm-til-print-horisontal-maks-10a/H15601
 
 
 - Fuse 2A slow-blow (T), 5 × 20 mm glass cartridge (T2A)
