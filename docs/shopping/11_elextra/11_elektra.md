@@ -6,6 +6,14 @@
 
 ## List
 
+- Fuse
+https://www.elextra.dk/en-gb/p/sikring-%C3%B836x10mm-tr%C3%A6g-2a-250vac/H22351
+
+https://www.elextra.dk/en-gb/p/sikring-%C3%B85x20mm-tr%C3%A6g-2a/H15291
+
+
+
+
 - Fuse 2A slow-blow (T), 5 × 20 mm glass cartridge (T2A)
     - Glassikring - Ø5x15mm, Flink, 2A 125VAC
     https://www.elextra.dk/en-gb/p/glassikring-%C3%B85x15mm-flink-2a-125vac/H11288
@@ -17,6 +25,9 @@
 
 - 74AHCT buffer chip
     - SN74AHCT125N
+https://www.elextra.dk/en-gb/p/sn74ahct125n-3-state-bus-buffer-4-kanal-dip14/H58555
+
+
 
 - Water Level Switch - Normally Closed (NC)
     On-state: from 9.0 til 13.7mm
