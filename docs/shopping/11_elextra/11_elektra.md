@@ -6,29 +6,29 @@
 
 ## List
 
-- Fuse
-https://www.elextra.dk/en-gb/p/sikring-%C3%B836x10mm-tr%C3%A6g-2a-250vac/H22351
+- Fuse 2A 250V Ø3,6 x 10mm, Cartridge, Ceramic, Slow Blow
+    No need Fuse Holder
+    https://www.elextra.dk/en-gb/p/sikring-%C3%B836x10mm-tr%C3%A6g-2a-250vac/H22351
+    17.95
 
-https://www.elextra.dk/en-gb/p/sikring-%C3%B85x20mm-tr%C3%A6g-2a/H15291
+- Fuse 2A 250V Ø5x20mm, Glashus m. forniklede endekapper
+    https://www.elextra.dk/en-gb/p/sikring-%C3%B85x20mm-tr%C3%A6g-2a/H15291
+    8.95
 
-Holder
-https://www.elextra.dk/en-gb/p/sikringsholder-%C3%B85x20mm-til-print-horisontal-maks-10a/H15601
-
-
-- Fuse 2A slow-blow (T), 5 × 20 mm glass cartridge (T2A)
-    - Glassikring - Ø5x15mm, Flink, 2A 125VAC
-    https://www.elextra.dk/en-gb/p/glassikring-%C3%B85x15mm-flink-2a-125vac/H11288
-    - PICO II sikring - 2A (Flink) 125V
-    https://www.elextra.dk/en-gb/p/pico-ii-sikring-2a-flink-125v/H64841
-    - Has to be slow blow
-
-- Fuse Holder
-
-- 74AHCT buffer chip
-    - SN74AHCT125N
-https://www.elextra.dk/en-gb/p/sn74ahct125n-3-state-bus-buffer-4-kanal-dip14/H58555
+- Fuse Holder - Ø5x20mm, for PCB, horizontal (max. 10A)
+    https://www.elextra.dk/en-gb/p/sikringsholder-%C3%B85x20mm-til-print-horisontal-maks-10a/H15601
 
 
+- SN74AHCT125N buffer chip, 3 state bus buffer 4 channels
+    https://www.elextra.dk/en-gb/p/sn74ahct125n-3-state-bus-buffer-4-kanal-dip14/H58555
+
+- Clamp Leveler 3p
+    https://www.elextra.dk/en-gb/p/klemme-samlemuffe-3-x-02-4mm-32a-alle-ledningstyper/H39576
+    2 pcs
+
+- Clamp Leveler Inline
+    https://www.elextra.dk/en-gb/p/klemme-samlemuffe-inline-02-4mm-32a-alle-ledningstyper/H52206
+    2 pcs
 
 - Water Level Switch - Normally Closed (NC)
     On-state: from 9.0 til 13.7mm
@@ -57,3 +57,19 @@ https://www.elextra.dk/en-gb/p/sn74ahct125n-3-state-bus-buffer-4-kanal-dip14/H58
 - STP200N3LL N-Channel MOSFET TO-220 30V, Logic Level
     Maybe not needed
 
+## Cart
+
+H39576	Klemme-samlemuffe, 3 x 0,2-4mm², 32A, alle ledningstyper
+In warehouse stock (Struer).	2	3.16	3.95	6.32	7.90
+
+H39575	Klemme-samlemuffe, Inline 0,2-4mm², 32A, alle ledningstyper
+In warehouse stock (Struer).	2	3.96	4.95	7.92	9.90
+
+H15291	Sikring - Ø5x20mm, Træg, 2A
+In warehouse stock (Struer).	2	7.16	8.95	14.32	17.90
+
+H58555	SN74AHCT125N 3-state bus buffer - 4 kanal (DIP14)
+In warehouse stock (Struer).	1	23.20	29.00	23.20	29.00
+
+H15601	Sikringsholder - Ø5x20mm, til print, horisontal (maks. 10A)
+In warehouse stock (Struer).	1	27.20	34.00	27.20	34.00

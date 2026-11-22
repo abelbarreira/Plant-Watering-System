@@ -82,6 +82,7 @@
 10pcs   Resistor (1M)
 
 3pcs    Clamp-type connector, 2 x 0.2–4 mm², 32 A, 450V, all wire types, 1 connection, 2 terminals
+1pcs    Clamp-type connector, 2 x 0.2–4 mm², 32 A, 450V, all wire types, 1 connection, 4 terminals
 1pcs    Clamp-type connector, 2 x 0.2–4 mm², 32 A, 450V, all wire types, 1 connection, 5 terminals
 1pcs    DC Jack 5.5×2.1 Female socket To Screw Terminals
 1pcs    DC Jack 5.5×2.1 Male   socket To Screw Terminals
